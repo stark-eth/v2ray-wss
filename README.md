@@ -9,6 +9,10 @@ WSS 代理，443和8080端口都是可用端口，8080 是免流端口，关闭 
 
 `wget https://git.io/tcp-wss.sh && bash tcp-wss.sh`
 
+一键配置kcp
+`wget https://raw.githubusercontent.com/stark-eth/v2ray-wss/main/kcp.sh
+`
+
 便宜VPS推荐：https://hostalk.net/deals.html
 
 ![image](https://user-images.githubusercontent.com/13328328/127747290-d6485b45-f84f-44da-ad32-6d374f21d35f.JPG)
