@@ -106,7 +106,7 @@ cat >/usr/local/etc/v2ray/config.json<<EOF
 {
   "inbounds": [
     {
-      "port": 8080,
+      "port": 8081,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -116,10 +116,26 @@ cat >/usr/local/etc/v2ray/config.json<<EOF
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-        "path": "/$v2path"
-        }
+        "network": "kcp",
+        "security": "none",
+        "tlsSettings": {},
+        "tcpSettings": {},
+        "httpSettings": {},
+        "kcpSettings": {
+          "mtu": 1350,
+          "tti": 50,
+          "uplinkCapacity": 100,
+          "downlinkCapacity": 100,
+          "congestion": false,
+          "readBufferSize": 2,
+          "writeBufferSize": 2,
+          "header": {
+            "type": "none"
+          }
+        },
+        "wsSettings": {},
+        "quicSettings": {}
+
       }
     }
   ],
